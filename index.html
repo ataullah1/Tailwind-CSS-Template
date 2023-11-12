@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Project</title>
+    <link rel="stylesheet" href="./tailwindstyle.css" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+  <body
+    class="md:h-screen bg-[url('./images/bgc.png')] bg-no-repeat w-full relative"
+  >
+    <div class="w-full text-white">
+      <div class="bg-slate-500 relative md:p-0">
+        <div
+          class="flex items-center justify-between w-11/12 m-auto md:justify-around"
+        >
+          <img class="w-32 md:w-36 z-10" src="./images/logo.png" alt="" />
+          <div class="bg-slate-500 w-full h-14 z-10 md:hidden"></div>
+          <div
+            id="togol"
+            class="absolute right-0 pt-1 text-right translate-y-[-400px] duration-1000 md:duration-0 bg-slate-500 w-full md:static md:translate-y-0 md:p-0 lg:w-9/12"
+          >
+            <ul
+              class="list-none md:flex md:justify-evenly items-center md:w-9/12 md:m-auto"
+            >
+              <li
+                class="py-2 hover:bg-slate-700 text-center md:px-6 md:py-8 md:text-lg"
+              >
+                <a href="#">Home</a>
+              </li>
+              <li
+                class="py-2 hover:bg-slate-700 text-center md:px-6 md:py-8 md:text-lg"
+              >
+                <a href="#">About</a>
+              </li>
+              <li
+                class="py-2 hover:bg-slate-700 text-center md:px-6 md:py-8 md:text-lg"
+              >
+                <a href="#">Features</a>
+              </li>
+              <li
+                class="py-2 hover:bg-slate-700 text-center md:px-6 md:py-8 md:text-lg"
+              >
+                <a href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <img
+            class="w-6 h-7 mr-10 md:mr-0 md:w-6 md:h-7 cursor-pointer z-10 hover:scale-75 duration-300"
+            src="./images/cart.png"
+            alt=""
+          />
+        </div>
+        <ion-icon
+          class="absolute right-4 top-[13px] text-4xl cursor-pointer md:hidden"
+          name="menu"
+          onclick="Menu(this)"
+        ></ion-icon>
+      </div>
+      <div
+        class="flex flex-col-reverse text-center md:flex-row md:text-left flex items-center md:w-11/12 md:m-auto md:justify-between"
+      >
+        <div class="md:w-1/2">
+          <h1 class="p-5 text-4xl font-bold">
+            Groceries <br class="hidden md:block" />
+            delivery in <span class="font-normal">15 mins</span>
+          </h1>
+          <p class="text-sm pb-7 md:pl-5 w-[90%] m-auto md:text-base md:m-0">
+            blanditiis quae dolorem fuga optio, voluptate doloremque voluptate
+            doloremque perferendis! Tenetur, recusandae hic!
+          </p>
+          <div class="flex flex-col md:flex-row items-center md:pl-5">
+            <button
+              class="py-3 bg-yellow-300 w-3/5 m-auto text-lg text-black font-medium rounded-full hover:bg-green-200 hover:scale-105 duration-500 md:w-auto md:px-8 md:m-0"
+            >
+              Order Now
+            </button>
+            <button
+              class="md:px-5 py-3 flex justify-center underline decoration-white hover:decoration-yellow-500"
+            >
+              Download App
+              <ion-icon
+                class="text-2xl text-pink-600 ml-1 hover:translate-y-2 hover:text-yellow-300"
+                name="arrow-down-circle"
+              ></ion-icon>
+            </button>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <img
+            class="max-w-sm m-auto md:hover:scale-95 duration-500 md:min-w-full lg:translate-y-16"
+            src="./images/grocery-image.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="absolute left-0 bottom-[-100px] md:bottom-1 w-full text-center">
+      <p class="text-white italic">
+        Coded with <span> ❤ </span> by
+        <a
+          class="underline decoration-pink-500 bg-white hover:bg-yellow-500 hover:text-white text-black"
+          href="https://www.linkedin.com/in/md-ataullah/"
+          >Md Ataullah </a
+        >.
+      </p>
+    </div>
+    <script>
+      function Menu(e) {
+        let list = document.getElementById('togol');
+        e.name === 'menu'
+          ? ((e.name = 'close'), list.classList.add('translate-y-[110px]'))
+          : ((e.name = 'menu'), list.classList.remove('translate-y-[110px]'));
+      }
+    </script>
+  </body>
+</html>
